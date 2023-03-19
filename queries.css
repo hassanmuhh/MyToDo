@@ -1,0 +1,73 @@
+/* 1344 px */
+
+/* 1200 px */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    margin-right: 10px;
+  }
+
+  .tasks-parent {
+    width: calc(100% - 10px);
+  }
+
+  .tasks-count {
+    right: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 845px) {
+
+
+  .tasks-parent {
+    grid-template-columns: 1fr;
+    width: 60%;
+    row-gap: 25px;
+  }
+
+  .tasks-count {
+    right: 40px;
+  }
+
+  /* .task-box {
+    background-color: #090;
+  }
+  */
+}
+
+@media (max-width: 595px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .task-box {
+    font-size: 16px;
+  }
+
+  .task-box input {
+    font-size: 14px;
+  }
+
+  .tasks-parent {
+    width: 75%;
+  }
+}
+
+
+@media (max-width: 425px) {
+  .tasks-parent {
+    width: 85%;
+  }
+
+  .tasks-count {
+    right: 20px;
+  }
+}

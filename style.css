@@ -1,0 +1,228 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap'); */
+
+:root {
+  --main-color: #7abf89;
+  --dark-color: #1A936F;
+  --btn-color: #014531;
+  --black-color: #110808;
+  --light-color: #e9e9e9;
+  --lightest-color: #fff;
+
+  --shadow-color: #3B513C;
+}
+
+/* GENERAL */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--black-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding: 15px;
+  font-size: 42px;
+  letter-spacing: -2px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px var(--shadow-color),
+    1px 2px 0px var(--shadow-color),
+    1px 3px 0px var(--shadow-color),
+    1px 4px 0px var(--shadow-color),
+    1px 5px 0px var(--shadow-color),
+    1px 6px 0px var(--shadow-color),
+    1px 10px 5px rgba(16, 16, 16, 0.5),
+    1px 15px 10px rgba(16, 16, 16, 0.4),
+    1px 20px 30px rgba(16, 16, 16, 0.3),
+    1px 25px 50px rgba(16, 16, 16, 0.2);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+/*END GENERAL */
+
+.tasks-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 100px 0;
+  width: 90%;
+}
+
+.not-started-list,
+.not-started-list li,
+.in-prog-list,
+.in-prog-list li,
+.completed-list,
+.completed-list li {
+  position: relative;
+}
+
+.task-box,
+.task-box ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  gap: 9px;
+  padding: 10px;
+  width: 90%;
+}
+
+.task-box {
+  align-self: start;
+  position: relative;
+  border-radius: 5px;
+  border: 3px solid var(--lightest-color);
+}
+
+.task-box ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  gap: 6px;
+  width: 100%;
+  border: none;
+  transition: all 0.3s;
+}
+
+.task-box input {
+  width: 100%;
+  padding: 10px 20px;
+  padding-left: 10px;
+  background-color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.task-box input:focus {
+  outline: none;
+}
+
+.task-box button {
+  cursor: pointer;
+  padding: 10px;
+  width: 90%;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: var(--btn-color);
+  color: var(--lightest-color);
+  border: none;
+  border-radius: 5px;
+}
+
+/* Counter Style */
+.tasks-count {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12px;
+  right: 50px;
+  background-color: var(--dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* END Counter Style */
+
+
+/* Style Edit and Delete Btns */
+.control-del {
+  position: absolute;
+  background: url('assets/trash.svg');
+  width: 20px;
+  height: 20px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.control-del:hover,
+.control-edit:hover {
+  width: 18px;
+  height: 18px;
+}
+
+.control-edit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: url('assets/create-outline.svg');
+  right: 35px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* END Style Edit and Delete Btns */
+
+/* Footer Area */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0 5px 0;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--black-color);
+}
+
+footer span {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+footer span a {
+  font-weight: bold;
+  color: var(--black-color);
+}
+
+/* Helper Classes */
+.bord-5 {
+  border: 0.5px solid var(--lightest-color);
+  border-radius: 5px;
+}
+
+.dropped {
+  background-color: var(--dark-color);
+}
+
+.ctrl {
+  opacity: 0.6;
+}
